@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "flask-app"
+version = "0.1.0"
+description = ""
+authors = ["Rubén Laguna <ruben.laguna@gmail.com>"]
+readme = "README.md"
+packages = [{include = "flask_app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+redis = "^4.6.0"
+gunicorn = "^20.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
