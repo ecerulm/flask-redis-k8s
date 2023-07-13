@@ -15,5 +15,15 @@ minikube addons enable metrics-server
 kubectl config current-context
 kubectl get nodes
 kubectl apply -f manifest.yaml
+
+minikube -n flask-redis-k8s service flask
+curl -v --resolve myflask.local:80:127.0.0.1 http://myflask.local/
+
+
+
+kubectl -n flask-redis-k8s get ingress
+minikube tunnel
+curl -v --resolve myflask.example.com:80:127.0.0.1 http://myflask.example.com
+
 ```
 
